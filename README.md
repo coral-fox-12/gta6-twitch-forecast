@@ -42,13 +42,22 @@ network):
 | case | launch | loss |
 | --- | --- | --- |
 | p00 | Marvel's Wolverine | 0.1822 |
-| p01 | Red Dead Redemption 2 | 0.1169 |
-| p02 | God of War Ragnarök | 0.1074 |
-| p03 | Marvel's Spider-Man 2 | 0.2125 |
-| **mean** | | **0.1547** |
+| p01 | Red Dead Redemption 2 | 0.1061 |
+| p02 | God of War Ragnarök | 0.1044 |
+| p03 | Marvel's Spider-Man 2 | 0.2172 |
+| **mean** | | **0.1525** |
+
+v2 changes (iteration 2): DST alignment of the US-East-midnight unlock wave
+and a 0.85 shrinkage of the residual-quantile spread. v1 scored 0.1547
+(p00 0.1822, p01 0.1169, p02 0.1074, p03 0.2125). The 0.125 gate for a
+second submission was not reached: the residual variance is dominated by a
+single per-launch shape factor (85.7% of it) that no observable in the case
+predicts, and the model is already unbiased (leave-one-out mean bias ≈ 0.00
+at every hour).
 
 House baseline (persistence) scores 0.387 on the same cases. The live
-practice board's best entry at last check was 0.134, rank 20 was 0.154.
+practice board at 17:21 +07: best 0.0975, rank 20 0.125; our v1 entry scored
+0.155 live (rank #327/3,825), confirming the local scorer (0.1547 local).
 
 ## How to run
 
